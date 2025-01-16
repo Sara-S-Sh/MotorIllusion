@@ -6,5 +6,3 @@ addpath(fieldtrip_path);
 
 % Initialize FieldTrip (sets up dependencies and configurations)
 ft_defaults;
-
-% testds
