@@ -40,7 +40,7 @@ clear;
 currentDir = fileparts(mfilename('fullpath'));
 
 % Go up one level to 'a' and then to 'other_file'
-data_path = fullfile(currentDir, '..', 'ds003343');
+data_path = fullfile(fileparts(currentDir), 'ds003343')
 
 % Path to the raw data files
 path.rawdata = data_path;
