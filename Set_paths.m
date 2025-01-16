@@ -36,28 +36,32 @@ clear;
 
 %% Path settings for the whole processing pipeline
 
-% Path to the raw data files
-% path.rawdata = '/Users/sarasepehrishakib/Documents/Project/ds003343';
-path.rawdata = '/Users/sarasepehrishakib/Documents/Project/ds003343';
+% Get the directory of the current script
+currentDir = fileparts(mfilename('fullpath'));
 
+% Go up one level to 'a' and then to 'other_file'
+data_path = fullfile(currentDir, '..', 'ds003343');
+
+% Path to the raw data files
+path.rawdata = data_path;
 
 % Path to the Vibramoov sequence files (for trigger extraction)
-path.sequences = '/Users/sarasepehrishakib/Documents/Project/ds003343/stimulation_sequences';
+path.sequences = fullfile(data_path, 'stimulation_sequences');
 
 % Path to the save directory after fixing triggers
-path.data = '/Users/sarasepehrishakib/Documents/Project/ds003343/output/Data_Fixed';
+path.data = fullfile(data_path, 'output', 'Data_Fixed');
 
 % Path to preprocessed data (after filtering, artifact removal)
-path.preproc = '/Users/sarasepehrishakib/Documents/Project/ds003343/Data_Preprocessed';
+path.preproc = fullfile(data_path, 'output', 'Data_Preprocessed');
 
 % Path to PSD data
-path.psd = '/Users/sarasepehrishakib/Documents/Project/ds003343/Data_PSD';
+path.psd = fullfile(data_path, 'output', 'Data_PSD');
 
 % Path to ERP data
-path.erp = '/Users/sarasepehrishakib/Documents/Project/ds003343/Data_ERP';
+path.erp = fullfile(data_path, 'output', 'Data_ERP');
 
 % Path to Classification Results
-path.clsfres = '/Users/sarasepehrishakib/Documents/Project/ds003343/Results';
+path.clsfres = fullfile(data_path, 'output', 'Results');
 
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
