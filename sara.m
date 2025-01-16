@@ -5,4 +5,4 @@ fieldtrip_path = '/Users/sarasepehrishakib/Documents/MATLAB/fieldtrip-master';
 addpath(fieldtrip_path);
 
 % Initialize FieldTrip (sets up dependencies and configurations)
-ft_defaults;x
+ft_defaults;
