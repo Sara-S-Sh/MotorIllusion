@@ -37,25 +37,27 @@ clear;
 %% Path settings for the whole processing pipeline
 
 % Path to the raw data files
-path.rawdata = 'C:\Documents\Vibramoov\Data\Data_Raw';
+% path.rawdata = '/Users/sarasepehrishakib/Documents/Project/ds003343';
+path.rawdata = '/Users/sarasepehrishakib/Documents/Project/ds003343';
+
 
 % Path to the Vibramoov sequence files (for trigger extraction)
-path.sequences = 'C:\Documents\Vibramoov\Data\Sequences';
+path.sequences = '/Users/sarasepehrishakib/Documents/Project/ds003343/stimulation_sequences';
 
 % Path to the save directory after fixing triggers
-path.data = 'C:\Documents\Vibramoov\Data\Data_Fixed';
+path.data = '/Users/sarasepehrishakib/Documents/Project/ds003343/output/Data_Fixed';
 
 % Path to preprocessed data (after filtering, artifact removal)
-path.preproc = 'C:\Documents\Vibramoov\Data\Data_Preprocessed';
+path.preproc = '/Users/sarasepehrishakib/Documents/Project/ds003343/Data_Preprocessed';
 
 % Path to PSD data
-path.psd = 'C:\Documents\Vibramoov\Data\Data_PSD';
+path.psd = '/Users/sarasepehrishakib/Documents/Project/ds003343/Data_PSD';
 
 % Path to ERP data
-path.erp = 'C:\Documents\Vibramoov\Data\Data_ERP';
+path.erp = '/Users/sarasepehrishakib/Documents/Project/ds003343/Data_ERP';
 
 % Path to Classification Results
-path.clsfres = 'C:\Documents\Vibramoov\Data\Results';
+path.clsfres = '/Users/sarasepehrishakib/Documents/Project/ds003343/Results';
 
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
