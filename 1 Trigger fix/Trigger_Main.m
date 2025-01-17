@@ -36,6 +36,8 @@ disp('-------------------------------------------------------------------')
 % Load defaults
 Trigger_Settings()
 
+% addpath('/Users/sarasepehrishakib/Documents/Project/MotorIllusion/0 Dependencies/From External/bdfmatlab')
+
 % iterate over eeg raw recording files
 for f = 1:size(fileargs.filenames,1)
     

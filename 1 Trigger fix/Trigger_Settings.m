@@ -33,4 +33,5 @@ default.sessionstring = 'ses';
 
 % automatically set paths via the paths.mat file
 tmp = load('paths.mat');
+% tmp = load('/Users/sarasepehrishakib/Documents/Project/MotorIllusion/0 Dependencies/internal/paths.mat');
 default.path = tmp.path; 

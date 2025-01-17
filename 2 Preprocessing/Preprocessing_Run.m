@@ -35,6 +35,7 @@ clc;
 
 Preprocessing_Settings();
 
+% addpath('/Users/sarasepehrishakib/Documents/Project/MotorIllusion/0 Dependencies/From External');
 % open UI to select folders to process
 folders = uipickfiles('Prompt','Select Folders','FilterSpec',args.path.data);
 

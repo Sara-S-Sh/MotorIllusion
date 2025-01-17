@@ -112,10 +112,10 @@ for f = 1:length(args.files)
     % Rejected trials won't be eliminated at this step!
     
     % WARNING! For this to work you have to add the following lines in the
-    % ft_rejectvisual file of fieldtrip BEFORE this line: "% convert back to input type if necessary"
+    % my_ft_rejectvisual file of fieldtrip BEFORE this line: "% convert back to input type if necessary"
     % | cfg.rejchan = ~chansel;
     % | cfg.rejtrl = ~trlsel;
-    % WARNING! Shadowing the ft_rejectvisual.m will trigger a conflict with
+    % WARNING! Shadowing the my_ft_rejectvisual.m will trigger a conflict with
     % a private function.
     
     cfg = [];
@@ -124,7 +124,7 @@ for f = 1:length(args.files)
     cfg.elec          = 'standard_1005.elc';
     cfg.neighbours  = nb;
     cfg.keeptrial   = 'yes';
-    data_goodchans{f} = ft_rejectvisual(cfg, data_epoched);
+    data_goodchans{f} = my_ft_rejectvisual(cfg, data_epoched);
     
     carry.artifactchans(f,:) = data_goodchans{f}.cfg.rejchan;
     
@@ -146,7 +146,7 @@ cfg.keepchannel = 'repair';
 cfg.elec          = 'standard_1005.elc';
 cfg.neighbours  = nb;
 cfg.keeptrial   = 'nan';
-data_clean_tmp = ft_rejectvisual(cfg, data_concat);
+data_clean_tmp = my_ft_rejectvisual(cfg, data_concat);
 
 % save artifact trial indices for artifact structure
 artifact_concat.chan = data_clean_tmp.cfg.rejchan;
@@ -154,7 +154,7 @@ artifact_concat.trial = find(data_clean_tmp.cfg.rejtrl);
 
 cfg = [];
 cfg.method = 'trial';
-data_clean = ft_rejectvisual(cfg, data_clean_tmp);
+data_clean = my_ft_rejectvisual(cfg, data_clean_tmp);
 
 
 %% build artifact structure per run

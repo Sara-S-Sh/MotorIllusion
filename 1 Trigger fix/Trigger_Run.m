@@ -37,6 +37,7 @@ Trigger_Settings()
 
 % Select folders
 % -------------------------------------------------------------------------
+% addpath('/Users/sarasepehrishakib/Documents/Project/MotorIllusion/0 Dependencies/From External/')
 folders = uipickfiles('Prompt','Select Folders','FilterSpec',default.path.rawdata);
 
 for sub = 1:size(folders,2)

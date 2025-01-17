@@ -36,26 +36,32 @@ clear;
 
 %% Path settings for the whole processing pipeline
 
+% Get the directory of the current script
+currentDir = fileparts(mfilename('fullpath'));
+
+% Go up one level to 'a' and then to 'other_file'
+data_path = fullfile(fileparts(currentDir), 'ds003343')
+
 % Path to the raw data files
-path.rawdata = 'C:\Documents\Vibramoov\Data\Data_Raw';
+path.rawdata = data_path;
 
 % Path to the Vibramoov sequence files (for trigger extraction)
-path.sequences = 'C:\Documents\Vibramoov\Data\Sequences';
+path.sequences = fullfile(data_path, 'stimulation_sequences');
 
 % Path to the save directory after fixing triggers
-path.data = 'C:\Documents\Vibramoov\Data\Data_Fixed';
+path.data = fullfile(data_path, 'output', 'Data_Fixed');
 
 % Path to preprocessed data (after filtering, artifact removal)
-path.preproc = 'C:\Documents\Vibramoov\Data\Data_Preprocessed';
+path.preproc = fullfile(data_path, 'output', 'Data_Preprocessed');
 
 % Path to PSD data
-path.psd = 'C:\Documents\Vibramoov\Data\Data_PSD';
+path.psd = fullfile(data_path, 'output', 'Data_PSD');
 
 % Path to ERP data
-path.erp = 'C:\Documents\Vibramoov\Data\Data_ERP';
+path.erp = fullfile(data_path, 'output', 'Data_ERP');
 
 % Path to Classification Results
-path.clsfres = 'C:\Documents\Vibramoov\Data\Results';
+path.clsfres = fullfile(data_path, 'output', 'Results');
 
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
